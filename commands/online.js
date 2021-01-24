@@ -17,7 +17,8 @@ module.exports.run = async(bot, message, args) => {
                 .addField("Server Detected As Offline", "No Players Online OBVS")
             channel.send(embed)
         
-    });
+        }
+    })
 };
 
 module.exports.help = {
