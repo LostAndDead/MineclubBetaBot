@@ -9,13 +9,13 @@ module.exports.run = async(bot, message, args) => {
                 .setColor(0x33FF41)
                 .setTitle("Online")
                 .addField("Server Detected As Online", `Players Online ${body.players.online}`)
-            channel.send(embed)
+                message.channel.send(embed)
         }else{
             let embed = new Discord.MessageEmbed()
                 .setColor(0xFF5733)
                 .setTitle("Offline")
                 .addField("Server Detected As Offline", "No Players Online OBVS")
-            channel.send(embed)
+            message.channel.send(embed)
         
         }
     })
