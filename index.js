@@ -81,6 +81,11 @@ bot.on("message", async message => {
         let contains2 = "#**stairgang**"
         if (message.content.toLowerCase().includes(contains) || message.content.toLowerCase().includes(contains2)){
             message.channel.send("#**StairGang**")
+        }else{
+            let num = Math.floor(Math.random() * 101);
+            if(num == 69){
+                message.channel.send("Thats a **#StairGang** moment.")
+            }
         }
     }
 });
