@@ -98,14 +98,14 @@ function check_server(){
         if (body.online == true){
             if(body.players.online < 3){
                 let embed = new Discord.MessageEmbed()
-                    .setColor(d92e2e)
+                    .setColor(0xd92e2e)
                     .setTitle("Offline")
                     .addField("Server Detected As Offline", "This was detected by the player count being lover than 3")
                 channel.send(embed)
             }
         }else{
             let embed = new Discord.MessageEmbed()
-                .setColor(d92e2e)
+                .setColor(0xd92e2e)
                 .setTitle("Offline")
                 .addField("Server Detected As Offline", "This was detected by the server returning offline.")
             channel.send(embed)
