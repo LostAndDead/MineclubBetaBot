@@ -64,7 +64,6 @@ bot.on("ready", async() => {
             type: Config.Settings.StatusType
         }
     });
-    check_server()
 });
 
 bot.on("message", async message => {
@@ -89,31 +88,5 @@ bot.on("message", async message => {
         }
     }
 });
-
-function check_server(){
-    let guild = bot.guilds.cache.find(guild => guild.id == "802159815706542100")
-    let channel = guild.channels.cache.find(channel => channel.id == "802160676599758888")
-    request('https://api.mcsrvstat.us/2/play.mineclub.com', { json: true }, (err, res, body) => {
-        if (err) { return console.log(err); }
-        if (body.online == true){
-            if(body.players.online < 3){
-                let embed = new Discord.MessageEmbed()
-                    .setColor(0xd92e2e)
-                    .setTitle("Offline")
-                    .addField("Server Detected As Offline", "This was detected by the player count being lover than 3")
-                channel.send(embed)
-            }
-        }else{
-            let embed = new Discord.MessageEmbed()
-                .setColor(0xd92e2e)
-                .setTitle("Offline")
-                .addField("Server Detected As Offline", "This was detected by the server returning offline.")
-            channel.send(embed)
-        }
-        
-    });
-
-    let repeat = setTimeout(check_server, 10000)
-}
 
 bot.login(Config.Setup.Token);
