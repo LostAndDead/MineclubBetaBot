@@ -3,7 +3,7 @@ const fs = require("fs");
 const yaml = require('js-yaml');
 const request = require('request');
 
-const bot = new Discord.Client({ disableEveryone: true });
+const bot = new Discord.Client({ disableEveryone: true,  ws: { intents: ['GUILDS', 'GUILD_MEMBERS', 'GUILD_MESSAGES'] }});
 
 let Config = null;
 
@@ -90,9 +90,8 @@ bot.on("message", async message => {
 });
 
 bot.on('guildMemberAdd', member => {
-    console.log(member.guild.id)
     if (member.guild.id == "802159815706542100"){
-        channel = member.guild.cache.find(channel => channel.id == "802159815706542103")
+        channel = member.guild.channels.cache.find(i => i.id === '802159815706542103')
         channel.send(`
 Welcome <@${member.id}>! ❤️ 
 <#802160845911621644> for the story of the gang
