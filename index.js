@@ -89,4 +89,16 @@ bot.on("message", async message => {
     }
 });
 
+bot.on('guildMemberAdd', member => {
+    if (member.guild.id == "802159815706542100"){
+        channel = member.guild.cache.find(channel => channel.id == "802159815706542103")
+        channel.send(`
+Welcome <@${member.id}>! ❤️ 
+<#802160845911621644> for the story of the gang
+<#802163360270778378> You need to change your title color to join the gang BTW 🤌 
+<#802720998603489359>  for news & updates on the server
+        `)
+    }
+})
+
 bot.login(Config.Setup.Token);
