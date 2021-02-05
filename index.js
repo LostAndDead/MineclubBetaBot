@@ -90,6 +90,7 @@ bot.on("message", async message => {
 });
 
 bot.on('guildMemberAdd', member => {
+    console.log(member.guild.id)
     if (member.guild.id == "802159815706542100"){
         channel = member.guild.cache.find(channel => channel.id == "802159815706542103")
         channel.send(`
