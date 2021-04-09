@@ -33,7 +33,6 @@ fs.readdir("./commands/", (err, file) => {
         let props = require(`./commands/${f}`);
         bot.commands.set(props.help.name, props);
     });
-    console.clear()
     console.log("All commands loaded successfully\n");
 });
 
