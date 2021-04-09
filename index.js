@@ -79,9 +79,11 @@ bot.on("message", async message => {
         let Commandfile = bot.commands.get(cmd.slice(Config.Setup.Prefix.length));
         if (Commandfile) Commandfile.run(bot, message, args);
     }else{
-        let num = Math.floor(Math.random() * 101);
+        let num = Math.floor(Math.random() * 201);
         if(num == 69){
             message.channel.send("Thats a **#Beta** moment.")
+        }else if(num == 21){
+            message.channel.send("Thats a **#StairGang** moment.")
         }
     }
 });
