@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const fs = require("fs");
 const yaml = require('js-yaml');
-const request = require('request');
 
 const bot = new Discord.Client({ disableEveryone: true,  ws: { intents: ['GUILDS', 'GUILD_MEMBERS', 'GUILD_MESSAGES'] }});
 
