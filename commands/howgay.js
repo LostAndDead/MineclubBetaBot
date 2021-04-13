@@ -13,11 +13,11 @@ module.exports.run = async(bot, message, args) => {
         "Over the tipping point.",
         "IDK man, seems kinda gay to me.",
         "When a lesbian asks for directions, never tell them to go straight.",
-        "The rock be lookin kinda hor right?",
+        "The rock be lookin kinda hot right?",
         "\"But senpi im straight\", \"So is spaghetti till it's wet.\"",
     ]
 
-    let num = Math.floor(Math.random() * 11);
+    let num = Math.ceil(Math.random() * 10);
     let numclone = num
     let num2 = 10 - num
     let bar = ""
