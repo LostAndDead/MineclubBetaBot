@@ -17,7 +17,7 @@ module.exports.run = async(bot, message, args) => {
         "\"But senpi im straight\", \"So is spaghetti till it's wet.\"",
     ]
 
-    let num = Math.ceil(Math.random() * 10);
+    let num = Math.floor(Math.random() * (10 - 1 + 1) + 1);
     let numclone = num
     let num2 = 10 - num
     let bar = ""
