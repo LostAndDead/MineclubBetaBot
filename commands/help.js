@@ -26,6 +26,7 @@ module.exports.run = async(bot, message, args) => {
     ${Config.Setup.Prefix}status -> Get the status and player count of the Mineclub server
     ${Config.Setup.Prefix}dick -> You wanna see how big it is ;)
     ${Config.Setup.Prefix}mineclub -> Get a link to the Mineclub Discord and website
+    ${Config.Setup.Prefix}howgay -> Well how gay is it?
     `)
     message.channel.send(embed)
 };
